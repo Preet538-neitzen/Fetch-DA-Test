@@ -99,21 +99,21 @@ Moreover, I also tried to understand what is the most popular and beneficial sto
 
 **Code for the advanced analysis is in the advanced folder.**
 
-Questions I want to clarify:
+Some things worth pointing out:
 
 1. Data Definition Clarification For The Analysis:
 
 In the current analysis, I’m assuming that **Finished = Accepted** because there are no rows where rewardsReceiptStatus is **Accepted**. Correct me if I am wrong, and I will update the analysis.
 
-1. Data Format:
+2. Data Format:
 
 The current data is not well structured. For example, rewardsReceiptItemList contains a blob of information, is there a way we can more efficiently store this data? This format would cost a lot of time for data wrangling in the future when we scale to millions of rows. It would be helpful for us to spend time discussing restructuring the current data frame so that we could work more efficiently in the future.
 
-2. Data Quality Issues - Missing Value and Outliers:
+3. Data Quality Issues - Missing Value and Outliers:
 
 After drawing box plots, looking at numerical data distributions, and calculating the null value percentage, I found that there are some missing values in the Users, Brands, and Receipts tables. There is a disproportionately large number of null values in the `rewardsReceiptItemList` column. Could you let me know what the data collection process was, so we can brainstorm methods to improve data quality and reduce the number of null values in the future? There are also lots of outliers in the dataset. For example, a few transactions earned 6000+ points, and spent 4000+ dollars. This could lead to extended standard deviations in our analysis.
 
-3. Some `userId` from the Receipts table don’t match the `_id` in the Users table. This might happen because our customer/user database isn’t large enough yet. It would be helpful for us to discuss some alternative methods to collect more user information. Having sufficient customer/user data will help further customer analysis. Another data issue I want to address is that there are a lot of brand codes in the Receipts table that do not exist in the Brands data. This could be problematic when we are doing analysis on a brand level.
+4. Some `userId` from the Receipts table don’t match the `_id` in the Users table. This might happen because our customer/user database isn’t large enough yet. It would be helpful for us to discuss some alternative methods to collect more user information. Having sufficient customer/user data will help further customer analysis. Another data issue I want to address is that there are a lot of brand codes in the Receipts table that do not exist in the Brands data. This could be problematic when we are doing analysis on a brand level.
 
 Thanks!
 
