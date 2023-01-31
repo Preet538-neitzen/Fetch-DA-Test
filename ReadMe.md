@@ -74,7 +74,7 @@ This is a data analytics internship coding exercise for Fetch. **The SQL Dialect
 
 ## Section 3: Note to stakeholders
 
-Hi all,
+Greetings,
 
 I've been working on the analysis of finding the most ideal source for attracting new users to use Fetch rewards. I want to update my progress and get clarity on some questions.
 
@@ -114,8 +114,6 @@ The current data is not well structured. For example, rewardsReceiptItemList con
 After drawing box plots, looking at numerical data distributions, and calculating the null value percentage, I found that there are some missing values in the Users, Brands, and Receipts tables. There is a disproportionately large number of null values in the `rewardsReceiptItemList` column. Could you let me know what the data collection process was, so we can brainstorm methods to improve data quality and reduce the number of null values in the future? There are also lots of outliers in the dataset. For example, a few transactions earned 6000+ points, and spent 4000+ dollars. This could lead to extended standard deviations in our analysis.
 
 Some `userId` from the Receipts table don’t match the `_id` in the Users table. This might happen because our customer/user database isn’t large enough yet. It would be helpful for us to discuss some alternative methods to collect more user information. Having sufficient customer/user data will help further customer analysis. Another data issue I want to address is that there are a lot of brand codes in the Receipts table that do not exist in the Brands data. This could be problematic when we are doing analysis on a brand level.
-
-Let me know what your thoughts are. We can schedule a meeting to clarify the above questions and discuss further analysis.
 
 Thanks!
 
